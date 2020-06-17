@@ -1,4 +1,4 @@
-## Welcome to Green Yogi Club
+## Green Yogi Club
 
 ### Coming Soon.
 
