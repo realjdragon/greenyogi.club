@@ -1,7 +1,7 @@
 theme: jekyll-theme-tactile
 title: Green Yogi Club
 description: Get Ready!
-url: '/'
-baseUrl: '/'
+url: https://realjdragon.github.io
+baseUrl: 'greenyogi.club'
 author:
   name: 'realjdragon'
