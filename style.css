@@ -111,7 +111,7 @@ section {
   font-size: 1.2rem;
   font-weight: 700;
   z-index: 2;
-  padding-right: 1em;
+  padding-right: .5em;
   background-color: var(--main-background-color);
 }
 
