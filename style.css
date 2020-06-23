@@ -13,6 +13,7 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   color: var(--main-foreground-color);
   background-color: var(--main-background-color);
+  height: 100vh;
 }
 
 a {
@@ -31,6 +32,7 @@ main {
   overflow: auto;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  position: relative;
 }
 
 main::-webkit-scrollbar {
@@ -201,6 +203,17 @@ aside i {
   color: var(--sub-foreground-color);
 }
 
+.dimmed.on {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  z-index: 10099;
+  opacity: 0.5;
+  background-color: rgb(0, 0, 0);
+}
+
 @media (max-width: 768px) {
   .container {
     padding-left: 5vw;
@@ -243,6 +256,10 @@ aside i {
     overflow: auto;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    display: none;
+  }
+
+  .dimmed {
     display: none;
   }
 }
