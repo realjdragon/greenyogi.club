@@ -9,9 +9,9 @@
   --accent-color: rgb(7, 150, 7);;
 }
 
-/* html, body {
+html, body {
   height: 100%;
-} */
+}
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
@@ -31,7 +31,7 @@ a {
 
 main {
   flex: 1;
-  height: 100vh;
+  height: 100%;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -45,7 +45,7 @@ main::-webkit-scrollbar {
 aside {
   position:relative;
   flex: 1;
-  height: 100vh;
+  height: 100%;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
