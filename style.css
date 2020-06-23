@@ -9,15 +9,15 @@
   --accent-color: rgb(7, 150, 7);;
 }
 
-html, body {
+/* html, body {
   height: 100%;
-}
+} */
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
   color: var(--main-foreground-color);
   background-color: var(--main-background-color);
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 a {
@@ -28,7 +28,6 @@ a {
 .columns-container {
   display: flex;
   justify-content: center;
-  height: 100%;
 }
 
 main {
