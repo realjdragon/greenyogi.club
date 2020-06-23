@@ -248,14 +248,26 @@ aside i {
   }
 
   aside {
-    position: absolute;
+    /* position: absolute;
     width: 100%;
     z-index: 1000;
     background-color: var(--main-background-color);
     height: 100vh;
     overflow: auto;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none; */
+    display: none;
+  }
+
+  aside.on {
+    /* position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--main-background-color);
+    height: 100vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; */
     display: none;
   }
 
