@@ -198,7 +198,7 @@ aside i {
   color: var(--sub-foreground-color);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .container {
     padding-left: 5vw;
     padding-right: 5vw;
