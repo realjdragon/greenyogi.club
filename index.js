@@ -1,11 +1,8 @@
 document.querySelector('.project-item').addEventListener('click', (e) => {
-  e.preventDefault();
-  console.log('만보');
+  document.querySelector('aside').classList.toggle('on');
+});
 
-  // const ui = document.querySelector('aside');
-  //  if (ui.style.display === 'none') {
-  //     ui.style.display = 'block';
-  //  } else {
-  //    ui.style.display = 'none';
-  //  }
+document.querySelector('aside .btn-close').addEventListener('click', (e) => {
+  document.querySelector('aside').classList.toggle('on');
+  location.hash = '';
 });

@@ -38,6 +38,7 @@ main::-webkit-scrollbar {
 }
 
 aside {
+  position:relative;
   flex: 1;
   height: 100vh;
   overflow: auto;
@@ -48,6 +49,10 @@ aside {
 
 aside::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
+}
+
+aside.on {
+  display:block;
 }
 
 .container {
@@ -157,8 +162,16 @@ section {
   margin-right: .1em;
 }
 
+.project-list li {
+  line-height: 2rem;
+}
+
 .contact-link {
   color: var(--accent-color);
+}
+
+.project-list li:last-child {
+  text-decoration: line-through;
 }
 
 .blank {
@@ -172,7 +185,21 @@ section {
 }
 
 aside article {
-  color: var(--accent-color);
+  color: var(--sub-foreground-color);
+}
+
+aside article h1 {
+  font-size: 3rem;
+  line-height: 1.9;
+}
+
+aside i {
+  position: fixed;
+  top: 20px;
+  right: 33px;
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--sub-foreground-color);
 }
 
 @media (max-width: 480px) {
@@ -206,5 +233,17 @@ aside article {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+  }
+
+  aside {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--main-background-color);
+    height: 100vh;
+    overflow: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    display: none;
   }
 }
