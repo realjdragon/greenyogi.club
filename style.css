@@ -31,8 +31,11 @@ body {
 }
 
 .title h1 span {
-  font-size: 2rem;
-  vertical-align: top;
+  font-size: 1.5rem;
+  vertical-align: center;
+  writing-mode: vertical-lr;
+  transform: translateY(1px);
+  color: var(--sub-foreground-color);
 }
 
 .description p {
@@ -137,6 +140,11 @@ section {
 
   .title h1 {
     font-size: 3.5rem;
+  }
+
+  .title h1 span {
+    font-size: 1.05rem;
+  transform: translateY(2px);
   }
 
   section {
