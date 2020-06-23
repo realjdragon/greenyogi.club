@@ -30,28 +30,28 @@ main {
   flex: 1;
   height: 100vh;
   overflow: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  /* -ms-overflow-style: none; */
+  /* scrollbar-width: none; */
   position: relative;
 }
 
-main::-webkit-scrollbar {
+/* main::-webkit-scrollbar {
   display: none;
-}
+} */
 
 aside {
   position:relative;
   flex: 1;
   height: 100vh;
   overflow: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  /* -ms-overflow-style: none; */
+  /* scrollbar-width: none; */
   display: none;
 }
 
-aside::-webkit-scrollbar {
+/* aside::-webkit-scrollbar {
   display: none;
-}
+} */
 
 aside.on {
   display:block;
@@ -247,10 +247,10 @@ aside i {
     border-radius: 50%;
   }
 
-  main, aside {
+  /* main, aside {
     -ms-overflow-style: auto;
     scrollbar-width: auto;
-  }
+  } */
 
   aside {
     /* position: absolute;
