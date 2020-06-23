@@ -170,10 +170,6 @@ section {
   color: var(--accent-color);
 }
 
-.project-list li:last-child {
-  text-decoration: line-through;
-}
-
 .blank {
   height: 10vh;
 }
