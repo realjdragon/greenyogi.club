@@ -143,6 +143,10 @@ section {
     margin: 8vh 0;
   }
 
+  .profile-description-wrapper {
+    padding: 1rem 0 1rem 3rem;
+  }
+
   .profile-img-wrapper img {
     width: 100px;
     height: 100px;
