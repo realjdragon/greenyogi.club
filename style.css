@@ -67,7 +67,7 @@ aside.on {
 }
 
 .title {
-  margin-top: 4vh;
+  margin-top: 1.6rem;
   padding: 20px 0;
 }
 
@@ -97,7 +97,7 @@ aside.on {
 
 /* sections */
 section {
-  margin: 10vh 0;
+  margin: 4.5125rem 0;
 }
 
 .separator {
@@ -177,13 +177,13 @@ section {
 }
 
 .blank {
-  height: 10vh;
+  height: 4.5125rem;
 }
 
 .copyright {
   color: var(--sub-foreground-color);
   text-align: center;
-  margin: 10vh 0;
+  margin: 4.5125rem 0;
 }
 
 aside article {
@@ -238,7 +238,7 @@ aside i {
   }
 
   section {
-    margin: 8vh 0;
+    margin: 4rem 0;
   }
 
   .profile-description-wrapper {
