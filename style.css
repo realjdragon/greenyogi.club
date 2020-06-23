@@ -20,6 +20,36 @@ a {
   color: var(--sub-foreground-color);
 }
 
+.columns-container {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  flex: 1;
+  height: 100vh;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+main::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+aside {
+  flex: 1;
+  height: 100vh;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  display: none;
+}
+
+aside::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -141,6 +171,10 @@ section {
   margin: 10vh 0;
 }
 
+aside article {
+  color: var(--accent-color);
+}
+
 @media (max-width: 480px) {
   .container {
     padding-left: 5vw;
@@ -153,6 +187,7 @@ section {
 
   .title-line-2 {
     display: block;
+    margin-left: 4px;
   }
 
   .title-vertical {
