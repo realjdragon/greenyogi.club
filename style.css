@@ -181,12 +181,15 @@ section {
 }
 
 aside article {
+  padding: 5vw;
   color: var(--sub-foreground-color);
+  line-height: 1.7;
 }
 
 aside article h1 {
   font-size: 3rem;
   line-height: 1.9;
+  font-style: oblique;
 }
 
 aside i {
