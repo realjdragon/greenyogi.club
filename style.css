@@ -248,8 +248,8 @@ aside i {
   }
 
   main, aside {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: auto;
+    scrollbar-width: auto;
   }
 
   aside {
