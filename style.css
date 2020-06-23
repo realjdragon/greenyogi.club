@@ -30,13 +30,13 @@ main {
   flex: 1;
   height: 100vh;
   overflow: auto;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   position: relative;
 }
 
 main::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+  display: none;
 }
 
 aside {
@@ -44,13 +44,13 @@ aside {
   flex: 1;
   height: 100vh;
   overflow: auto;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   display: none;
 }
 
 aside::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+  display: none;
 }
 
 aside.on {
@@ -247,15 +247,18 @@ aside i {
     border-radius: 50%;
   }
 
+  main, aside {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   aside {
     /* position: absolute;
     width: 100%;
     z-index: 1000;
     background-color: var(--main-background-color);
     height: 100vh;
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none; */
+    overflow: auto; */
     display: none;
   }
 
@@ -265,9 +268,7 @@ aside i {
     z-index: 1000;
     background-color: var(--main-background-color);
     height: 100vh;
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none; */
+    overflow: auto; */
     display: none;
   }
 
