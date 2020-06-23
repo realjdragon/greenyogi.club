@@ -17,7 +17,6 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   color: var(--main-foreground-color);
   background-color: var(--main-background-color);
-  height: 100vh;
 }
 
 a {
@@ -32,30 +31,30 @@ a {
 
 main {
   flex: 1;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
-  /* -ms-overflow-style: none; */
-  /* scrollbar-width: none; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   position: relative;
 }
 
-/* main::-webkit-scrollbar {
+main::-webkit-scrollbar {
   display: none;
-} */
+}
 
 aside {
   position:relative;
   flex: 1;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
-  /* -ms-overflow-style: none; */
-  /* scrollbar-width: none; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   display: none;
 }
 
-/* aside::-webkit-scrollbar {
+aside::-webkit-scrollbar {
   display: none;
-} */
+}
 
 aside.on {
   display:block;
