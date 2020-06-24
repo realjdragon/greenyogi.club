@@ -13,8 +13,4 @@
     document.querySelector('.main-wrapper').classList.toggle('main-wrapper-left');
     location.hash = '';
   });
-
-  document.querySelector('main').addEventListener('scroll', (e) => {
-    console.log(e);
-  });
 })();

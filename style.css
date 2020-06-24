@@ -235,11 +235,16 @@ aside .btn-back:hover {
   opacity: 1;
 }
 
+/* 아이패드 미만 */
 @media (max-width: 768px) {
   /* .container {
     padding-left: 5vw;
     padding-right: 5vw;
   } */
+
+  .main-wrapper.main-wrapper-left {
+    width: 100%;
+  }
 
   main {
     max-width: 100%;
@@ -251,6 +256,10 @@ aside .btn-back:hover {
     position: relative;
     transition: all 1s .5s;
     z-index: 5000;
+  }
+
+  main.left-half {
+    opacity: 1;
   }
 
   .title h1 {
@@ -281,22 +290,21 @@ aside .btn-back:hover {
   }
 
   aside {
-    /* position: absolute;
-    width: 100%;
-    z-index: 1000;
-    background-color: var(--main-background-color);
-    height: 100vh;
-    overflow: auto; */
-    display: none;
+    max-width: 100%;
   }
 
   aside.on {
-    /* position: absolute;
-    width: 100%;
-    z-index: 1000;
-    background-color: var(--main-background-color);
-    height: 100vh;
-    overflow: auto; */
-    display: none;
+    opacity: 1;
+    z-index: 20000;
+  }
+
+  aside .btn-back {
+    position: fixed;
+    top: 1%;
+    left: 5%;
+    font-size: 3rem;
+    cursor: pointer;
+    opacity: .4;
+    color: var(--sub-foreground-color);
   }
 }
