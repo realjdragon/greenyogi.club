@@ -17,6 +17,7 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   color: var(--main-foreground-color);
   background-color: var(--main-background-color);
+  width: 100%;
 }
 
 a {
@@ -24,34 +25,57 @@ a {
   color: var(--sub-foreground-color);
 }
 
-.columns-container {
-  display: flex;
-  justify-content: center;
+.main-wrapper {
+  width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
+  transition: all 1s .5s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.main-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.main-wrapper.main-wrapper-left {
+  width: 50%;
+  transition: all 1s;
 }
 
 main {
-  flex: 1;
-  /* height: 100%; */
-  overflow: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   position: relative;
+  transition: all 1s .5s;
+  z-index: 5000;
 }
 
-main::-webkit-scrollbar {
-  display: none;
+/* 프로젝트 aside가 켜졌을 경우 */
+main.left-half {
+  width: 100%;
+  opacity: 0.3;
+  transition: all 1s;
+  overflow: hidden;
 }
 
 aside {
-  position:relative;
-  flex: 1;
-  /* height: 100%; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 50%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 100%;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  display: none;
+  background-color: var(--main-background-color);
+  opacity: 0;
+  z-index: -1000;
+  transition: all 1s;
+  border-left: 1px solid #d8d8d8;
 }
 
 aside::-webkit-scrollbar {
@@ -59,12 +83,9 @@ aside::-webkit-scrollbar {
 }
 
 aside.on {
-  display:block;
-}
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
+  transition: all 1s .5s;
+  opacity: 1;
+  z-index: 20000;
 }
 
 .title {
@@ -199,30 +220,37 @@ aside article h1 {
   font-style: oblique;
 }
 
-aside i {
+aside .btn-back {
   position: fixed;
-  top: 20px;
-  right: 33px;
+  top: 1%;
+  left: 52%;
   font-size: 3rem;
   cursor: pointer;
+  opacity: .4;
   color: var(--sub-foreground-color);
 }
 
-.dimmed.on {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 50%;
-  height: 100%;
-  z-index: 10099;
-  opacity: 0.5;
-  background-color: rgb(0, 0, 0);
+aside .btn-back:hover {
+  transition: all .5s;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
-  .container {
+  /* .container {
     padding-left: 5vw;
     padding-right: 5vw;
+  } */
+
+  main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+    transition: all 1s .5s;
+    z-index: 5000;
   }
 
   .title h1 {
@@ -252,11 +280,6 @@ aside i {
     border-radius: 50%;
   }
 
-  /* main, aside {
-    -ms-overflow-style: auto;
-    scrollbar-width: auto;
-  } */
-
   aside {
     /* position: absolute;
     width: 100%;
@@ -274,10 +297,6 @@ aside i {
     background-color: var(--main-background-color);
     height: 100vh;
     overflow: auto; */
-    display: none;
-  }
-
-  .dimmed {
     display: none;
   }
 }
