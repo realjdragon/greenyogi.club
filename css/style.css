@@ -1,5 +1,5 @@
-@import url('../Default/reset.css');
-@import url('../Default/common.css');
+@import url('Default/reset.css');
+@import url('Default/common.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
 
 :root {
@@ -64,7 +64,7 @@ aside {
   position: absolute;
   top: 0;
   right: 0;
-  max-width: 50%;
+  width: 50%;
   padding-left: 1rem;
   padding-right: 1rem;
   height: 100%;
@@ -290,7 +290,7 @@ aside .btn-back:hover {
   }
 
   aside {
-    max-width: 100%;
+    width: 100%;
   }
 
   aside.on {
