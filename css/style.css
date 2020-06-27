@@ -25,6 +25,7 @@ a {
   color: var(--sub-foreground-color);
 }
 
+/* main 바깥에서도 스크롤을 사용할 수 있도록 하기 위해 */
 .main-wrapper {
   width: 100%;
   height: 100%;
@@ -38,54 +39,20 @@ a {
   display: none;
 }
 
-.main-wrapper.main-wrapper-left {
+/* 프로젝트 aside가 켜졌을 경우 */
+.main-wrapper.project-on {
   width: 50%;
   transition: all 1s;
+  opacity: .3;
+  border-right: 1px solid gray;
 }
 
-main {
+.main-contents {
   max-width: 650px;
   margin: 0 auto;
   padding: 0 1.5rem;
   position: relative;
-  transition: all 1s .5s;
   z-index: 5000;
-}
-
-/* 프로젝트 aside가 켜졌을 경우 */
-main.left-half {
-  width: 100%;
-  opacity: 0.3;
-  transition: all 1s;
-  overflow: hidden;
-}
-
-aside {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  height: 100%;
-  overflow: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  background-color: var(--main-background-color);
-  opacity: 0;
-  z-index: -1000;
-  transition: all 1s;
-  border-left: 1px solid #d8d8d8;
-}
-
-aside::-webkit-scrollbar {
-  display: none;
-}
-
-aside.on {
-  transition: all 1s .5s;
-  opacity: 1;
-  z-index: 20000;
 }
 
 .title {
@@ -118,7 +85,7 @@ aside.on {
 }
 
 /* sections */
-section {
+.main-section {
   margin: 4.5125rem 0;
 }
 
@@ -208,19 +175,46 @@ section {
   margin: 4.5125rem 0;
 }
 
-aside article {
+.project-slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: var(--main-background-color);
+  opacity: 0;
+  z-index: 0;
+  transition: all 1s;
+}
+
+.project-slide::-webkit-scrollbar {
+  display: none;
+}
+
+.project-slide.on {
+  transition: all 1s .5s;
+  opacity: 1;
+  z-index: 20000;
+}
+
+.project-slide article {
   padding: 5vw;
   color: var(--sub-foreground-color);
   line-height: 1.7;
 }
 
-aside article h1 {
+.project-slide article h1 {
   font-size: 3rem;
   line-height: 1.9;
   font-style: oblique;
 }
 
-aside .btn-back {
+.project-slide .btn-back {
   position: fixed;
   top: 1%;
   left: 52%;
@@ -230,23 +224,23 @@ aside .btn-back {
   color: var(--sub-foreground-color);
 }
 
-aside .btn-back:hover {
+.project-slide .btn-back:hover {
   transition: all .5s;
   opacity: 1;
 }
 
 /* 아이패드 미만 */
 @media (max-width: 768px) {
-  /* .container {
-    padding-left: 5vw;
-    padding-right: 5vw;
-  } */
-
-  .main-wrapper.main-wrapper-left {
-    width: 100%;
+  .main-wrapper {
+    transition: none;
   }
 
-  main {
+  .main-wrapper.project-on {
+    width: 100%;
+    transition: none;
+  }
+
+  .main-contents {
     max-width: 100%;
     margin: 0 auto;
     padding-left: 1.5rem;
@@ -256,10 +250,6 @@ aside .btn-back:hover {
     position: relative;
     transition: all 1s .5s;
     z-index: 5000;
-  }
-
-  main.left-half {
-    opacity: 1;
   }
 
   .title h1 {
@@ -275,7 +265,7 @@ aside .btn-back:hover {
     font-size: 1.05rem;
   }
 
-  section {
+  .main-section {
     margin: 4rem 0;
   }
 
@@ -289,16 +279,18 @@ aside .btn-back:hover {
     border-radius: 50%;
   }
 
-  aside {
+  .project-slide {
     width: 100%;
+    transition: all .5s;
   }
 
-  aside.on {
+  .project-slide.on {
     opacity: 1;
     z-index: 20000;
+    transition: all .5s;
   }
 
-  aside .btn-back {
+  .project-slide .btn-back {
     position: fixed;
     top: 1%;
     left: 5%;

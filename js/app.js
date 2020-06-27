@@ -1,28 +1,55 @@
 'use strict';
 
 (function () {
+  const projectSlide = document.querySelector('.project-slide');
+  const mainWrapper = document.querySelector('.main-wrapper');
+
   const openAside = () => {
-    document.querySelector('aside').classList.add('on');
-    document.querySelector('main').classList.add('left-half');
-    document.querySelector('.main-wrapper').classList.add('main-wrapper-left');
+    projectSlide.classList.add('on');
+    mainWrapper.classList.add('project-on');
+
+    console.log('openAside!');
 
     // 프로젝트 창 off
-    document.querySelector('aside .btn-back').addEventListener('click', (e) => {
+    document.querySelector('.project-slide .btn-back').addEventListener('click', (e) => {
       location.hash = '';
     });
-
-    console.log('hash-callback');
   };
 
   const closeAside = () => {
-    document.querySelector('aside').classList.remove('on');
-    document.querySelector('main').classList.remove('left-half');
-    document.querySelector('.main-wrapper').classList.remove('main-wrapper-left');
+    projectSlide.classList.remove('on');
+    mainWrapper.classList.remove('project-on');
   };
 
-  var router = new HashRouter([
-      new HashRoute({ name: 'home', htmlName: 'home.html', callback: closeAside, defaultRoute: true }),            
-      new HashRoute({ name: 'manbo', htmlName: 'manbo.html', callback: openAside }),
-      new HashRoute({ name: 'saboten', htmlName: 'saboten.html', callback: openAside })
-  ]);
+  var router = new HashRouter([]);
+
+  router.get('', closeAside);
+
+  router.get('manbo', () => {
+    var url = "views/manbo.html",
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        projectSlide.innerHTML = this.responseText;
+        openAside();
+      }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+  });
+
+  router.get('saboten', () => {
+    var url = "views/saboten.html",
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        projectSlide.innerHTML = this.responseText;
+        openAside();
+      }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+  });
+
+  router.init();
 }());
