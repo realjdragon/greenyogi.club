@@ -281,13 +281,13 @@ a {
 
   .project-slide {
     width: 100%;
-    transition: all .5s;
+    transition: none;
   }
 
   .project-slide.on {
     opacity: 1;
     z-index: 20000;
-    transition: all .5s;
+    transition: none;
   }
 
   .project-slide .btn-back {
